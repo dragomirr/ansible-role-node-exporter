@@ -1,0 +1,5 @@
+---
+node_exporter_version: 1.5.0
+node_exporter_sha_checksum: af999fd31ab54ed3a34b9f0b10c28e9acee9ef5ac5a5d5edfdde85437db7acbb
+node_exporter_options: []
+# --collector.textfile.directory /var/lib/node_exporter/textfile_collector

@@ -1,0 +1,16 @@
+#
+# {{ ansible_managed }}
+#
+[Unit]
+Description=Node Exporter: Creates an export of the health of Node
+
+[Service]
+User=node_exporter
+Group=node_exporter
+{% if node_exporter_options | length > 0 %}
+EnvironmentFile=/etc/sysconfig/node_exporter
+{% endif %}
+ExecStart=/opt/node_exporter/node_exporter{% if node_exporter_options | length > 0 %} $OPTIONS{% endif %}
+
+[Install]
+WantedBy=multi-user.target
