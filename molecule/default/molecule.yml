@@ -1,0 +1,42 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: vagrant
+platforms:
+  - name: ubuntu2204
+    box: ubuntu/jammy64
+    cpu: 0.25
+    memory: 512
+  - name: ubuntu2004
+    box: ubuntu/focal64
+    cpu: 0.25
+    memory: 512
+  - name: ubuntu1804
+    box: ubuntu/bionic64
+    cpu: 0.25
+    memory: 512
+  - name: debianbuster
+    box: debian/buster64
+    cpu: 0.25
+    memory: 512
+  - name: debianbullseye
+    box: debian/bullseye64
+    cpu: 0.25
+    memory: 512
+  - name: centos7
+    box: centos/7
+    cpu: 0.25
+    memory: 512
+  - name: almalinux8
+    box: almalinux/8
+    cpu: 0.25
+    memory: 512
+  - name: almalinux9
+    box: almalinux/9
+    cpu: 0.25
+    memory: 512
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
